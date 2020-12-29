@@ -17,7 +17,16 @@ def solve(input_data):
     result = None
 
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+
+    result = ''
+
+    for i in input_data:
+        to_bin = bin(i)[2:]
+        to_oct = oct(i)
+        to_hex = hex(i)
+        # print(f'{str(i).rjust(8)}{to_bin.rjust(8)}{to_oct.rjust(8)}{to_hex.rjust(8)}\n')
+        result += f'{str(i).rjust(8)}{to_bin.rjust(8)}{to_oct.rjust(8)}{to_hex.rjust(8)}\n'
 
     return result
 

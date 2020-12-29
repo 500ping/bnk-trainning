@@ -134,11 +134,11 @@ def solve(input_data):
     - Tạo 1 list chứa tên, dân số của các thành phố có dân số trên 1 triệu,
     sắp xếp theo thứ tự giảm dần.
     '''
-    provinces_startswith_h = []
-    provinces_more_than_1m = []
+    provinces_startswith_h = sorted([(city['name'], city['population']) for city in data if city['name'][0] == 'H'], key=lambda temp: temp[0])
+    provinces_more_than_1m = sorted([(city['name'], city['population']) for city in data if city['population'] > 1000000], key=lambda temp: temp[1], reverse=True)
 
     # Xoá dòng raise và Viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
 
     result = (provinces_startswith_h, provinces_more_than_1m)
     return result

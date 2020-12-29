@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import string
 
 def solve():
 
@@ -17,7 +17,18 @@ def solve():
     unicodes = []
 
     # Xoá dòng raise và Viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+
+    nums_and_letters = string.digits + string.ascii_letters
+    for char in nums_and_letters:
+        unicodes.append((char, ord(char)))
+
+    for i in range(33, 53):
+        twenty_ascii.append((i, chr(i)))
+
+    tabcodepoint = ord('\t')
+    newlinecodepoint = ord('\n')
+    spacecodepoint = ord(' ')
 
     result = (twenty_ascii, unicodes, tabcodepoint,
               newlinecodepoint,

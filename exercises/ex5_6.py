@@ -12,7 +12,11 @@ def solve(term1, term2):
 
     result = {}
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+
+    result = term1
+    result.update(term2)
+
     return result
 
 

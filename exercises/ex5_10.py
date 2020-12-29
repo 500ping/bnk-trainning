@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 
 '''
 [Không bắt buộc]
@@ -19,11 +20,13 @@ def solve(input_data):
     #
     #
 
+    result = (math.factorial(2*input_data)) / (math.factorial(input_data))**2
+
     return result
 
 
 def main():
-    print(solve())
+    print(solve(10))
 
 
 if __name__ == "__main__":
