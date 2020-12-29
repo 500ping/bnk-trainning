@@ -16,7 +16,12 @@ def solve(text):
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
 
-    result = text.lower() == text[::-1].lower()
+    text = text.strip()
+
+    if len(text) > 1:
+        result = text.lower() == text[::-1].lower()
+    else:
+        result = False
 
     return result
 
