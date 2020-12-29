@@ -15,8 +15,13 @@ def solve(text):
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Học viên chưa làm bài này")
-    num_regex = r'[0-9]+'
-    result = [int(i) for i in re.findall(num_regex, text)]
+    # num_regex = r'[0-9]+'
+    # result = [int(i) for i in re.findall(num_regex, text)]
+
+    new_text = [(char if char in '0123456789' else ' ') for char in text]
+    new_text = ''.join(new_text)
+
+    result = [int(num) for num in new_text.split()]
 
     return result
 
